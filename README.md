@@ -4,9 +4,8 @@
 
 ![Proje Ekran Görüntüsü](./public/ornek1.png)
 
-## 🔗 Canlı Demo (Live Preview)
-Projenin çalışan canlı halini buradan inceleyebilirsiniz:
-👉 **[]**
+## 🔗 Canlı Demo
+Uygulamayı buradan test edebilirsiniz: [https://dancing-mermaid-e3f22e.netlify.app/](https://dancing-mermaid-e3f22e.netlify.app/)
 
 ---
 
