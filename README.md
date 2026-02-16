@@ -52,7 +52,7 @@ Bu uygulama, kullanıcıların proje fikirlerini kayıt altına alabileceği, d�
 
 ---
 
-## 📂 Klasör Yapısı (Yönergeye Uygun)
+## 📂 Klasör Yapısı 
 
 Proje, modüler ve ölçeklenebilir bir dosya yapısına sahiptir:
 
