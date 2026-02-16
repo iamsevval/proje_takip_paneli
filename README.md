@@ -3,7 +3,6 @@
 > **Web Geliştirme Eğitimi** kapsamında ReactJS, Tailwind CSS ve Modern JavaScript teknikleri kullanılarak geliştirilmiş kapsamlı bir CRUD uygulamasıdır.
 
 ![Proje Ekran Görüntüsü](./public/ornek1.png)
-*(Ekran görüntüsü projenin ana dizininde olmalı)*
 
 ## 🔗 Canlı Demo (Live Preview)
 Projenin çalışan canlı halini buradan inceleyebilirsiniz:
