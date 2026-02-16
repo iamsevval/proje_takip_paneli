@@ -67,6 +67,9 @@ src/
 ├── Interfaces/       # Veri Modeli Tanımlamaları
 │   └── IProject.js       # JSDoc formatında veri yapısı
 │
+├── styles/           # Stil dosyaları (Tailwind / CSS)
+│   └── index.css     # Global stil tanımlamaları ve Tailwind direktifleri
+│
 ├── assets/           # Görseller ve statik dosyalar
 ├── App.jsx           # Ana uygulama sarmalayıcısı
 └── main.jsx          # Giriş noktası
