@@ -25,17 +25,20 @@ Bu uygulama, kullanıcıların proje fikirlerini kayıt altına alabileceği, d�
 - **Anlık Arama:** Arama çubuğuna yazılan kelimeye göre liste anlık olarak filtrelenir.
 - **Öncelik Sıralaması:** Projeler önem derecesine göre otomatik sıralanır (**Yüksek > Orta > Düşük**).
 
+![Proje Ekran Görüntüsü](./public/ornek2.png)
+
 ### 3. API Entegrasyonu & Veri Yönetimi
 - **JSONPlaceholder API:** Başlangıç verileri API'den çekilir.
+- **Homojen Veri Dağıtımı:** API'den gelen ham verilere, uygulamanın yapısına uygun olarak stabil ve sıralı (homojen) kategori ve önem dereceleri atanır.
 - **LocalStorage:** Sayfa yenilense bile eklenen veriler kaybolmaz (State Persistence).
-- **Rastgele Veri Üretimi:** API'den gelen veriler için rastgele kategori ve önem derecesi atanır.
 
 ### 4. Kullanıcı Deneyimi (UX)
+- **Karanlık/Aydınlık Tema (Dark Mode):** Kullanıcı tercihine göre tek tıkla değişen ve son durumu tarayıcı hafızasında (LocalStorage) tutarak modern bir tema deneyimi sunar.
 - **Dashboard İstatistikleri:** Toplam, API ve Lokal veri sayılarını gösteren dinamik sayaçlar.
 - **Loading State:** Veriler yüklenirken kullanıcıya "Yükleniyor" animasyonu gösterilir.
 - **Toast Bildirimler:** İşlem başarı/hata durumlarında sağ üstte bilgilendirme mesajları çıkar.
 
-![Proje Ekran Görüntüsü](./public/ornek2.png)
+![Proje Ekran Görüntüsü](./public/ornek3.png)
 
 ---
 
@@ -57,19 +60,25 @@ Proje, modüler ve ölçeklenebilir bir dosya yapısına sahiptir:
 
 ```text
 src/
-├── Components/       # Yeniden kullanılabilir bileşenler
-│   ├── ProjectForm.jsx   # Ekleme ve Güncelleme Formu
-│   └── Footer.jsx        # Sayfa Alt Bilgisi
+├── Components/              # Yeniden kullanılabilir bileşenler
+│   ├── ProjectForm.jsx       # Proje ekleme / güncelleme formu
+│   ├── ProjectList.jsx       # Proje listesini render eden component
+│   ├── ProjectCard.jsx       # Her proje kartını gösterir
+│   ├── Stats.jsx             # Toplam, API ve Lokal istatistikler
+│   ├── Notification.jsx      # Bildirim gösterimi
+│   └── Footer.jsx            # Sayfa alt bilgisi
 │
-├── Pages/            # Sayfa bileşenleri ve Ana Mantık
-│   └── HomePage.jsx      # Dashboard, State Yönetimi ve CRUD Logic
+├── Pages/                   # Sayfa bileşenleri ve ana mantık
+│   └── HomePage.jsx          # Dashboard, state yönetimi ve CRUD logic
 │
-├── Interfaces/       # Veri Modeli Tanımlamaları
-│   └── IProject.js       # JSDoc formatında veri yapısı
+├── Interfaces/              # Veri model ve tip tanımlamaları
+│   └── IProject.js           # JSDoc formatında proje veri yapısı
 │
-├── styles/           # Stil dosyaları (Tailwind / CSS)
-│   └── index.css     # Global stil tanımlamaları ve Tailwind direktifleri
+├── styles/                  # Stil dosyaları (Tailwind / CSS)
+│   └── index.css             # Global stil tanımlamaları ve Tailwind direktifleri
 │
-├── assets/           # Görseller ve statik dosyalar
-├── App.jsx           # Ana uygulama sarmalayıcısı
-└── main.jsx          # Giriş noktası
+├── assets/                  # Görseller ve statik dosyalar
+│   └── (örn: logo.png, icon.svg)  
+│
+├── App.jsx                   # Ana uygulama sarmalayıcısı (Router vs.)
+└── main.jsx                  # Uygulama giriş noktası
